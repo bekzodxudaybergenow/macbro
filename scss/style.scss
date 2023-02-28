@@ -5,7 +5,11 @@
     --BRIGHT-GRAY: #E8F1F3;
     --TAUPE-GRAY: #878787;
     --DAVYS-GREY: #595959;
+    --AZUREISH-WHITE: #D8E5E8;
+    --WHITE: #FFFFFF;
 }
+
+@import './header';
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -20,7 +24,7 @@ body {
 
 .wrapper {
     max-width: 1440px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     background-color: var(--BRIGHT-GRAY);
 }
@@ -29,4 +33,43 @@ body {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 209px;
+    height: 56px;
+    border: 1px solid var(--DARK-CHARCOAL);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--DARK-CHARCOAL);
+    font-weight: 500;
+    line-height: 24px;
+    transition: .3s;
+
+    &:hover {
+        color: var(--DAVYS-GREY);
+        border-color: var(--DAVYS-GREY);
+    }
+}
+
+.discount-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 384px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--WHITE);
+    background-color: var(--DARK-CHARCOAL);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+        background-color: var(--DAVYS-GREY)
+    }
 }

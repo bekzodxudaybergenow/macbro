@@ -4,6 +4,100 @@
   --BRIGHT-GRAY: #E8F1F3;
   --TAUPE-GRAY: #878787;
   --DAVYS-GREY: #595959;
+  --AZUREISH-WHITE: #D8E5E8;
+  --WHITE: #FFFFFF;
+}
+
+.header {
+  padding-top: 50px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.head__logo {
+  width: 183px;
+  height: 50px;
+}
+
+.head__list {
+  display: flex;
+  list-style: none;
+}
+
+.head__list__item {
+  margin-right: 20px;
+}
+
+.head__list__item:last-child {
+  margin-right: 0;
+}
+
+.head__item__link {
+  text-decoration: none;
+  color: var(--DARK-CHARCOAL);
+  font-weight: 400px;
+  transition: 0.3s;
+}
+.head__item__link:hover {
+  color: var(--DAVYS-GREY);
+}
+
+.hero {
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 92px;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 82px;
+  background-color: var(--AZUREISH-WHITE);
+}
+
+.hero__content__text {
+  max-width: 537px;
+  margin-right: 79px;
+}
+
+.hero__text--title {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 65px;
+  color: var(--DARK-CHARCOAL);
+  margin-bottom: 16px;
+}
+
+.hero__text--descr {
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--TAUPE-GRAY);
+  margin-bottom: 32px;
+}
+
+.hero__content__img img {
+  display: block;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background-color: var(--WHITE);
+}
+
+.partners img {
+  margin-right: 64px;
+}
+.partners img:last-child {
+  margin-right: 0;
 }
 
 *, *::before, *::after {
@@ -19,7 +113,7 @@ body {
 
 .wrapper {
   max-width: 1440px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   background-color: var(--BRIGHT-GRAY);
 }
@@ -28,4 +122,41 @@ body {
   max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 209px;
+  height: 56px;
+  border: 1px solid var(--DARK-CHARCOAL);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--DARK-CHARCOAL);
+  font-weight: 500;
+  line-height: 24px;
+  transition: 0.3s;
+}
+.btn:hover {
+  color: var(--DAVYS-GREY);
+  border-color: var(--DAVYS-GREY);
+}
+
+.discount-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--WHITE);
+  background-color: var(--DARK-CHARCOAL);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.discount-btn:hover {
+  background-color: var(--DAVYS-GREY);
 }/*# sourceMappingURL=style.css.map */
