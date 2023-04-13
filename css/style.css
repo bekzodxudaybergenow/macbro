@@ -10,6 +10,7 @@
 
 .header {
   padding-top: 50px;
+  position: relative;
 }
 
 .head {
@@ -17,6 +18,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 54px;
+}
+
+.humburger {
+  display: none;
 }
 
 .head__logo {
@@ -57,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 82px;
+  padding: 82px 40px 0;
   background-color: var(--AZUREISH-WHITE);
 }
 
@@ -123,14 +128,11 @@
 .producs__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
   list-style: none;
-}
-
-.products__list__item {
-  margin-right: 20px;
-}
-.products__list__item:last-child {
-  margin-right: 0;
 }
 
 .products__item--link:hover {
@@ -143,6 +145,85 @@
   height: 400px;
 }
 
+@media (max-width: 1180px) {
+  .header .humburger {
+    display: block;
+    position: sticky;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .header .humburger span {
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background-color: var(--DARK-CHARCOAL);
+    transition: 0.5s;
+  }
+  .header .humburger span:nth-child(1) {
+    top: 0;
+  }
+  .header .humburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header .humburger span:nth-child(3) {
+    bottom: 0;
+  }
+  .header .humburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .header .humburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .humburger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .header .head__list {
+    display: none;
+    position: fixed;
+    background-color: darkorange;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 160px;
+    text-align: center;
+  }
+  .header .head__list__item {
+    margin: 0;
+    padding-top: 40px;
+  }
+  .header .head__item__link {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 956px) {
+  .hero {
+    margin-top: 100px;
+  }
+  .hero__content {
+    flex-wrap: wrap;
+    padding: 42px 40px 0;
+  }
+  .hero__content__text {
+    padding-bottom: 40px;
+    order: 2;
+    margin-right: 0;
+    text-align: center;
+  }
+  .hero__content__img {
+    order: 1;
+    margin-bottom: 40px;
+  }
+  .hero__btn {
+    margin: 0 auto;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
